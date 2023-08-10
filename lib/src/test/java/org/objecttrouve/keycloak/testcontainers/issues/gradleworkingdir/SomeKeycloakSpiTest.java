@@ -19,7 +19,7 @@ class SomeKeycloakSpiTest {
     @Container
     private KeycloakContainer keycloak;
 
-    @DisplayName("Test adding classed from `build/libs`")
+    @DisplayName("Test adding classes from `build/libs`")
     @Test
     void testSomeSpiFromBuildClasses(){
         keycloak = keycloakContainer()
@@ -30,7 +30,7 @@ class SomeKeycloakSpiTest {
         checkSpiAdded();
     }
 
-    @DisplayName("Test adding classed from `classes`")
+    @DisplayName("Test adding classes from `classes`")
     @Test
     void testSomeSpiFromClasses(){
         keycloak = keycloakContainer()
@@ -41,7 +41,7 @@ class SomeKeycloakSpiTest {
         checkSpiAdded();
     }
 
-    @DisplayName("Test adding classed from `../classes` (which should actually work)")
+    @DisplayName("Test adding classes from `../classes` (which should actually work)")
     @Test
     void testSomeSpiFromDotDotClasses(){
         keycloak = keycloakContainer()
@@ -52,7 +52,7 @@ class SomeKeycloakSpiTest {
         checkSpiAdded();
     }
 
-    @DisplayName("Test adding classed from ``")
+    @DisplayName("Test adding classes from ``")
     @Test
     void testSomeSpiFromModuleDir(){
         keycloak = keycloakContainer()
@@ -63,7 +63,7 @@ class SomeKeycloakSpiTest {
         checkSpiAdded();
     }
 
-    @DisplayName("Test adding classed from `build`")
+    @DisplayName("Test adding classes from `build`")
     @Test
     void testSomeSpiFromBuild(){
         keycloak = keycloakContainer()
