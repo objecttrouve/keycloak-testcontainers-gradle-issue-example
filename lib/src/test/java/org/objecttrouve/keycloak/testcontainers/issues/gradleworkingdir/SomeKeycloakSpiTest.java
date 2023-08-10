@@ -90,7 +90,7 @@ class SomeKeycloakSpiTest {
 
     @SuppressWarnings("resource")
     private static KeycloakContainer keycloakContainer() {
-        return new KeycloakContainer()
+        return new KeycloakContainer("quay.io/keycloak/keycloak:22.0.1-0")
                 // Not working for some reason.
                 // .withAdminUsername("admin")
                 // .withAdminPassword("admin")
