@@ -16,15 +16,27 @@ repositories {
 }
 
 dependencies {
-    // Use JUnit Jupiter for testing.
+
+    compileOnly("org.keycloak:keycloak-core:22.0.1")
+    compileOnly("org.keycloak:keycloak-server-spi:22.0.1")
+    compileOnly("org.keycloak:keycloak-server-spi-private:22.0.1")
+    compileOnly("jakarta.ws.rs:jakarta.ws.rs-api:3.1.0")
+
+
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+//    testImplementation("org.testcontainers:testcontainers:1.18.3")
+    testImplementation("org.testcontainers:junit-jupiter:1.18.3")
+    testImplementation("com.github.dasniko:testcontainers-keycloak:3.0.0")
+    testImplementation("org.hamcrest:hamcrest:2.2")
+    testImplementation("org.objecttrouve:convenience-matchers:1.2.0")
+
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
