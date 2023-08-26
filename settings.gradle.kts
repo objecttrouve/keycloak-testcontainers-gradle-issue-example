@@ -10,5 +10,5 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.4.0"
 }
 
-rootProject.name = "keycloak-testcontainers-issuexxx"
+rootProject.name = "keycloak-testcontainers-gradle-issue-example"
 include("lib")
