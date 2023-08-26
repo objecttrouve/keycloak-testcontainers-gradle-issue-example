@@ -7,9 +7,10 @@ However, with Gradle projects, the directory structure is different.
 ⚠️ Unit tests in this project are failing intentionally! <br>
 ⚠️ It's not going to be maintained in any way.
 
-👀 See PR _TBD_ for further details. 
+👀 See [PR 112] for further details. 
 
 [`createKeycloakExtensionDeployment`]: https://github.com/dasniko/testcontainers-keycloak/blob/c03f9718cf48356bdc3ae485c09da344d01724ba/src/main/java/dasniko/testcontainers/keycloak/ExtendableKeycloakContainer.java#L218-L249
 [`resolveExtensionClassLocation`]: https://github.com/dasniko/testcontainers-keycloak/blob/c03f9718cf48356bdc3ae485c09da344d01724ba/src/main/java/dasniko/testcontainers/keycloak/ExtendableKeycloakContainer.java#L251-L257
 [Keycloak Testcontainer]: https://github.com/dasniko/testcontainers-keycloak/
 [On-the-fly adding of extension classes to the container]: https://github.com/dasniko/testcontainers-keycloak/#testing-custom-extensions
+[PR 112]: https://github.com/dasniko/testcontainers-keycloak/pull/112
