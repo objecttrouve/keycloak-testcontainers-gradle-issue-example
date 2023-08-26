@@ -9,6 +9,9 @@ However, with Gradle projects, the directory structure is different.
 
 👀 See [PR 112] for further details. 
 
+Run `./gradlew clean test` to execute the (failing) tests.
+
+
 [`createKeycloakExtensionDeployment`]: https://github.com/dasniko/testcontainers-keycloak/blob/c03f9718cf48356bdc3ae485c09da344d01724ba/src/main/java/dasniko/testcontainers/keycloak/ExtendableKeycloakContainer.java#L218-L249
 [`resolveExtensionClassLocation`]: https://github.com/dasniko/testcontainers-keycloak/blob/c03f9718cf48356bdc3ae485c09da344d01724ba/src/main/java/dasniko/testcontainers/keycloak/ExtendableKeycloakContainer.java#L251-L257
 [Keycloak Testcontainer]: https://github.com/dasniko/testcontainers-keycloak/
