@@ -33,6 +33,6 @@ public class SomeKeycloakSpiFactory implements RealmResourceProviderFactory {
 
     @Override
     public String getId() {
-        return null;
+        return ID;
     }
 }
