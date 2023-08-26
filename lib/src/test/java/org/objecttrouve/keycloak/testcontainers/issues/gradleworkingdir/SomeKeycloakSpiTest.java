@@ -19,7 +19,7 @@ class SomeKeycloakSpiTest {
     @Container
     private KeycloakContainer keycloak;
 
-    @DisplayName("Test adding classes from `build/libs`")
+    @DisplayName("Test adding classes from `build/classes` (intuitive but the wrong dir)")
     @Test
     void testSomeSpiFromBuildClasses(){
         keycloak = keycloakContainer()
@@ -30,49 +30,19 @@ class SomeKeycloakSpiTest {
         checkSpiAdded();
     }
 
-    @DisplayName("Test adding classes from `classes`")
+    @DisplayName("Fix: Test adding classes from `build/classes/java/main`")
     @Test
-    void testSomeSpiFromClasses(){
+    void testSomeSpiFromBuildClassesJavaMain(){
+
         keycloak = keycloakContainer()
-                .withProviderClassesFrom("classes");
+                .withProviderClassesFrom(
+                        "build/classes/java/main");
 
         keycloak.start();
 
         checkSpiAdded();
     }
 
-    @DisplayName("Test adding classes from `../classes` (which should actually work)")
-    @Test
-    void testSomeSpiFromDotDotClasses(){
-        keycloak = keycloakContainer()
-                .withProviderClassesFrom("../classes");
-
-        keycloak.start();
-
-        checkSpiAdded();
-    }
-
-    @DisplayName("Test adding classes from ``")
-    @Test
-    void testSomeSpiFromModuleDir(){
-        keycloak = keycloakContainer()
-                .withProviderClassesFrom("");
-
-        keycloak.start();
-
-        checkSpiAdded();
-    }
-
-    @DisplayName("Test adding classes from `build`")
-    @Test
-    void testSomeSpiFromBuild(){
-        keycloak = keycloakContainer()
-                .withProviderClassesFrom("build");
-
-        keycloak.start();
-
-        checkSpiAdded();
-    }
 
     private void checkSpiAdded() {
         try(Keycloak keycloakAdminClient = keycloak.getKeycloakAdminClient()){
