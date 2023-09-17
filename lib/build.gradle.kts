@@ -33,9 +33,9 @@ dependencies {
     testImplementation("org.keycloak:keycloak-server-spi-private:22.0.1")
 
     // Last release
-    testImplementation("com.github.dasniko:testcontainers-keycloak:3.0.0")
+//    testImplementation("com.github.dasniko:testcontainers-keycloak:3.0.0")
     // Local version with Gradle extension deployment support
-    // testImplementation("com.github.dasniko:testcontainers-keycloak:3.0.1-SNAPSHOT")
+     testImplementation("com.github.dasniko:testcontainers-keycloak:3.0.1-SNAPSHOT")
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }

@@ -19,24 +19,12 @@ class SomeKeycloakSpiTest {
     @Container
     private KeycloakContainer keycloak;
 
-    @DisplayName("Test adding classes from `build/classes` (intuitive but the wrong dir)")
-    @Test
-    void testSomeSpiFromBuildClasses(){
-        keycloak = keycloakContainer()
-                .withProviderClassesFrom("build/classes");
-
-        keycloak.start();
-
-        checkSpiAdded();
-    }
-
     @DisplayName("Fix: Test adding classes from `build/classes/java/main`")
     @Test
     void testSomeSpiFromBuildClassesJavaMain(){
 
         keycloak = keycloakContainer()
-                .withProviderClassesFrom(
-                        "build/classes/java/main");
+                .withProviderClassesAndResourcesFrom("build/classes/java/main", "build/resources/main");
 
         keycloak.start();
 
